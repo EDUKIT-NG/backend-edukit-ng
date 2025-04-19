@@ -133,3 +133,93 @@
 [2025-02-18T08:43:55.776Z] [ERROR] [HttpLogger]: POST /sponsors/login 401 112.377ms 40bytes - PostmanRuntime/7.43.0 ::1
 [2025-02-18T08:43:57.611Z] [ERROR] [HttpLogger]: POST /sponsors/login 403 150.300ms 64bytes - PostmanRuntime/7.43.0 ::1
 [2025-02-18T08:44:29.216Z] [ERROR] [HttpLogger]: POST /sponsors/login 403 124.761ms 64bytes - PostmanRuntime/7.43.0 ::1
+[2025-04-14T17:11:26.694Z] [ERROR] [App]: Error verifying token: jwt expired
+[2025-04-14T17:11:26.956Z] [ERROR] [App]: GET /api/user/registerUser 401 278.812ms 48bytes - Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 ::1
+[2025-04-14T17:11:29.908Z] [ERROR] [App]: Error verifying token: jwt expired
+[2025-04-14T17:11:29.953Z] [ERROR] [App]: GET /favicon.ico 401 77.245ms 48bytes - Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 ::1
+[2025-04-14T17:25:23.462Z] [ERROR] [Main]: Error connecting to database: connect ETIMEDOUT 159.41.77.237:27017, connect ENETUNREACH 64:ff9b::9f29:4ded:27017 - Local (:::0)
+[2025-04-14T17:26:20.459Z] [ERROR] [Main]: Error connecting to database: connect ETIMEDOUT 159.41.77.237:27017, connect ENETUNREACH 64:ff9b::9f29:4ded:27017 - Local (:::0)
+[2025-04-14T17:31:03.841Z] [ERROR] [Main]: Error connecting to database: connect ETIMEDOUT 159.41.77.237:27017, connect ENETUNREACH 64:ff9b::9f29:4ded:27017 - Local (:::0)
+[2025-04-14T17:31:39.893Z] [ERROR] [App]: Error verifying token: jwt expired
+[2025-04-14T17:31:39.913Z] [ERROR] [App]: GET /api/user/refresh-token 401 39.241ms 48bytes - Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 ::1
+[2025-04-14T17:31:55.215Z] [ERROR] [App]: Error verifying token: jwt expired
+[2025-04-14T17:31:55.230Z] [ERROR] [App]: GET /favicon.ico 401 21.330ms 48bytes - Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 ::1
+[2025-04-14T17:33:15.215Z] [ERROR] [App]: Error verifying token: jwt expired
+[2025-04-14T17:33:15.225Z] [ERROR] [App]: GET /api/user/registerUser 401 16.901ms 48bytes - Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 ::1
+[2025-04-14T17:33:18.066Z] [ERROR] [App]: Error verifying token: jwt expired
+[2025-04-14T17:33:18.112Z] [ERROR] [App]: GET /favicon.ico 401 55.763ms 48bytes - Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 ::1
+[2025-04-14T17:42:13.201Z] [ERROR] [App]: POST /api/user/registerUser 401 21.093ms 48bytes - PostmanRuntime/7.43.3 ::1
+[2025-04-14T17:42:28.550Z] [ERROR] [App]: POST /api/user/loginUser 401 7.293ms 48bytes - PostmanRuntime/7.43.3 ::1
+[2025-04-14T17:59:12.525Z] [ERROR] [App]: Error verifying token: jwt expired
+[2025-04-14T17:59:12.547Z] [ERROR] [App]: GET /api/user/registerUser 401 48.271ms 48bytes - Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 ::1
+[2025-04-14T17:59:40.463Z] [ERROR] [App]: Error verifying token: jwt expired
+[2025-04-14T17:59:40.467Z] [ERROR] [App]: GET /favicon.ico 401 8.752ms 48bytes - Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 ::1
+[2025-04-14T17:59:44.871Z] [ERROR] [App]: POST /api/user/registerUser 401 7.007ms 48bytes - PostmanRuntime/7.43.3 ::1
+[2025-04-14T18:02:56.270Z] [ERROR] [App]: POST /api/user/registerUser 401 3.977ms 48bytes - PostmanRuntime/7.43.3 ::1
+[2025-04-14T18:04:36.962Z] [ERROR] [App]: POST /api/user/registerUser 401 23.343ms 48bytes - PostmanRuntime/7.43.3 ::1
+[2025-04-14T18:06:18.380Z] [ERROR] [App]: POST /api/user/registerUser 401 6.477ms 48bytes - PostmanRuntime/7.43.3 ::1
+[2025-04-14T18:07:47.382Z] [ERROR] [App]: POST /api/user/registerUser 401 21.595ms 48bytes - PostmanRuntime/7.43.3 ::1
+[2025-04-14T18:11:30.410Z] [ERROR] [App]: GET /api/user/register 500 36.765ms 122bytes - Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 ::1
+[2025-04-14T18:11:32.999Z] [ERROR] [App]: Error verifying token: jwt expired
+[2025-04-14T18:11:33.011Z] [ERROR] [App]: GET /favicon.ico 401 39.672ms 48bytes - Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 ::1
+[2025-04-14T18:11:44.782Z] [ERROR] [App]: POST /api/user/register 500 25.163ms 55bytes - PostmanRuntime/7.43.3 ::1
+[2025-04-14T18:12:31.601Z] [ERROR] [App]: POST /api/user/register 500 6.556ms 55bytes - PostmanRuntime/7.43.3 ::1
+[2025-04-14T18:13:01.719Z] [ERROR] [App]: POST /api/user/register 500 10021.807ms 81bytes - PostmanRuntime/7.43.3 ::1
+[2025-04-14T18:14:16.660Z] [ERROR] [App]: POST /api/user/register 500 10008.630ms 81bytes - PostmanRuntime/7.43.3 ::1
+[2025-04-14T18:15:11.833Z] [ERROR] [App]: GET /api/user/register 500 7.276ms 122bytes - Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 ::1
+[2025-04-14T18:15:14.094Z] [ERROR] [App]: Error verifying token: jwt expired
+[2025-04-14T18:15:14.112Z] [ERROR] [App]: GET /favicon.ico 401 23.933ms 48bytes - Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 ::1
+[2025-04-14T18:28:55.699Z] [ERROR] [App]: POST /api/user/register 500 7.734ms 55bytes - PostmanRuntime/7.43.3 ::1
+[2025-04-14T18:33:57.375Z] [ERROR] [App]: POST /api/user/register 500 7650.651ms 55bytes - PostmanRuntime/7.43.3 ::1
+[2025-04-14T18:34:18.409Z] [ERROR] [App]: POST /api/user/register 500 11.790ms 55bytes - PostmanRuntime/7.43.3 ::1
+[2025-04-14T18:34:30.867Z] [ERROR] [App]: GET /api/user/register 500 23.269ms 122bytes - Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 ::1
+[2025-04-14T18:34:33.329Z] [ERROR] [App]: Error verifying token: jwt expired
+[2025-04-14T18:34:33.353Z] [ERROR] [App]: GET /favicon.ico 401 56.536ms 48bytes - Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 ::1
+[2025-04-14T18:38:00.948Z] [ERROR] [App]: POST /api/user/register 500 1786.520ms 133bytes - PostmanRuntime/7.43.3 ::1
+[2025-04-14T18:42:45.741Z] [ERROR] [App]: POST /api/user/register 500 7.212ms 53bytes - PostmanRuntime/7.43.3 ::1
+[2025-04-14T18:43:01.754Z] [ERROR] [App]: POST /api/user/register 500 10.041ms 57bytes - PostmanRuntime/7.43.3 ::1
+[2025-04-14T18:43:13.506Z] [ERROR] [App]: POST /api/user/register 500 5.314ms 57bytes - PostmanRuntime/7.43.3 ::1
+[2025-04-14T18:43:23.152Z] [ERROR] [App]: POST /api/user/register 500 589.522ms 133bytes - PostmanRuntime/7.43.3 ::1
+[2025-04-14T18:48:12.051Z] [ERROR] [App]: POST /api/user/register 500 38.864ms 43bytes - PostmanRuntime/7.43.3 ::1
+[2025-04-14T18:48:33.614Z] [ERROR] [App]: POST /api/user/register 500 9.820ms 48bytes - PostmanRuntime/7.43.3 ::1
+[2025-04-14T18:49:12.562Z] [ERROR] [App]: POST /api/user/register 500 365.692ms 133bytes - PostmanRuntime/7.43.3 ::1
+[2025-04-14T18:50:10.456Z] [ERROR] [App]: POST /api/user/register 500 10033.424ms 81bytes - PostmanRuntime/7.43.3 ::1
+[2025-04-14T18:50:32.901Z] [ERROR] [App]: POST /api/user/register 500 844.894ms 53bytes - PostmanRuntime/7.43.3 ::1
+[2025-04-14T18:52:28.182Z] [ERROR] [App]: Error verifying token: Cannot read properties of undefined (reading 'findById')
+[2025-04-14T18:52:28.208Z] [ERROR] [App]: POST /api/user/verify/67fd5902ffe29b80ce151d5c 500 42.089ms 36bytes - PostmanRuntime/7.43.3 ::1
+[2025-04-14T18:52:47.775Z] [ERROR] [App]: Error verifying token: Cannot read properties of undefined (reading 'findById')
+[2025-04-14T18:52:47.781Z] [ERROR] [App]: POST /api/user/verify/67fd5902ffe29b80ce151d5c 500 12.109ms 36bytes - PostmanRuntime/7.43.3 ::1
+[2025-04-14T18:53:20.847Z] [ERROR] [App]: Error verifying token: Cannot read properties of undefined (reading 'findById')
+[2025-04-14T18:53:20.851Z] [ERROR] [App]: POST /api/user/verify/67fd5902ffe29b80ce151d5c 500 9.851ms 36bytes - PostmanRuntime/7.43.3 ::1
+[2025-04-14T18:53:34.789Z] [ERROR] [App]: Error verifying token: Cannot read properties of undefined (reading 'findById')
+[2025-04-14T18:53:34.792Z] [ERROR] [App]: POST /api/user/verify/67fd5902ffe29b80ce151d5c 500 7.780ms 36bytes - PostmanRuntime/7.43.3 ::1
+[2025-04-14T18:54:43.783Z] [ERROR] [App]: Error verifying token: Cannot read properties of undefined (reading 'findById')
+[2025-04-14T18:54:43.788Z] [ERROR] [App]: POST /api/user/verify/67fd5902ffe29b80ce151d5c 500 9.739ms 36bytes - PostmanRuntime/7.43.3 ::1
+[2025-04-14T18:55:56.642Z] [ERROR] [App]: Error verifying token: Cannot read properties of undefined (reading 'findById')
+[2025-04-14T18:55:56.645Z] [ERROR] [App]: POST /api/user/verify/67fd5902ffe29b80ce151d5c 500 7.947ms 36bytes - PostmanRuntime/7.43.3 ::1
+[2025-04-14T18:57:10.842Z] [ERROR] [Main]: Error connecting to database: connect ETIMEDOUT 159.41.77.237:27017, connect ENETUNREACH 64:ff9b::9f29:4ded:27017 - Local (:::0)
+[2025-04-14T18:57:46.482Z] [ERROR] [App]: Error verifying token: Cannot read properties of undefined (reading 'findById')
+[2025-04-14T18:57:46.502Z] [ERROR] [App]: POST /api/user/verify/67fd5902ffe29b80ce151d5c 500 34.340ms 36bytes - PostmanRuntime/7.43.3 ::1
+[2025-04-14T19:02:58.119Z] [ERROR] [App]: Error verifying token: Cannot read properties of undefined (reading 'findById')
+[2025-04-14T19:02:58.126Z] [ERROR] [App]: POST /api/user 500 13.930ms 36bytes - PostmanRuntime/7.43.3 ::1
+[2025-04-14T19:03:07.023Z] [ERROR] [App]: Error verifying token: Cannot read properties of undefined (reading 'findById')
+[2025-04-14T19:03:07.030Z] [ERROR] [App]: GET /api/user 500 14.609ms 36bytes - PostmanRuntime/7.43.3 ::1
+[2025-04-14T19:03:17.909Z] [ERROR] [App]: Error verifying token: Cannot read properties of undefined (reading 'findById')
+[2025-04-14T19:03:17.913Z] [ERROR] [App]: GET / 500 8.233ms 36bytes - PostmanRuntime/7.43.3 ::1
+[2025-04-14T19:05:19.782Z] [ERROR] [App]: Error verifying token: Cannot read properties of undefined (reading 'findById')
+[2025-04-14T19:05:19.805Z] [ERROR] [App]: GET / 500 43.060ms 36bytes - PostmanRuntime/7.43.3 ::1
+[2025-04-14T19:05:37.776Z] [ERROR] [App]: Error verifying token: Cannot read properties of undefined (reading 'findById')
+[2025-04-14T19:05:37.783Z] [ERROR] [App]: GET /api/user/ 500 14.072ms 36bytes - PostmanRuntime/7.43.3 ::1
+[2025-04-14T19:06:22.364Z] [ERROR] [App]: Error verifying token: Cannot read properties of undefined (reading 'findById')
+[2025-04-14T19:06:22.369Z] [ERROR] [App]: GET /api/user/67fd5902ffe29b80ce151d5c 500 10.387ms 36bytes - PostmanRuntime/7.43.3 ::1
+[2025-04-14T19:07:02.501Z] [ERROR] [App]: Error verifying token: Cannot read properties of undefined (reading 'findById')
+[2025-04-14T19:07:02.523Z] [ERROR] [App]: GET /api/user/67fd5902ffe29b80ce151d5c 500 40.039ms 36bytes - PostmanRuntime/7.43.3 ::1
+[2025-04-14T19:18:31.873Z] [ERROR] [App]: Error verifying token: Cannot read properties of undefined (reading 'findById')
+[2025-04-14T19:18:31.879Z] [ERROR] [App]: GET /api/user/67fd5902ffe29b80ce151d5c 500 12.348ms 36bytes - PostmanRuntime/7.43.3 ::1
+[2025-04-14T19:18:42.149Z] [ERROR] [App]: Error verifying token: Cannot read properties of undefined (reading 'findById')
+[2025-04-14T19:18:42.157Z] [ERROR] [App]: POST /api/user/67fd5902ffe29b80ce151d5c 500 9.872ms 36bytes - PostmanRuntime/7.43.3 ::1
+[2025-04-14T19:20:17.258Z] [ERROR] [App]: GET /api/user/register 500 166.713ms 122bytes - Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 ::1
+[2025-04-14T19:20:28.112Z] [ERROR] [App]: Error verifying token: jwt expired
+[2025-04-14T19:20:28.120Z] [ERROR] [App]: GET /favicon.ico 401 15.944ms 48bytes - Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 ::1
+[2025-04-14T19:20:36.686Z] [ERROR] [App]: Error verifying token: Cannot read properties of undefined (reading 'findById')
+[2025-04-14T19:20:36.690Z] [ERROR] [App]: POST /api/user/67fd5902ffe29b80ce151d5c 500 8.467ms 36bytes - PostmanRuntime/7.43.3 ::1

@@ -9,7 +9,7 @@ const resetPassword = expressAsyncHandler(async (req, res) => {
   const session = await mongoose.startSession();
   session.startTransaction();
   try {
-    const { id } = req.params;
+    const id = req.user._id;
     const result = await passwordResetSchema.validateAsync(req.body);
     const { password } = result;
 

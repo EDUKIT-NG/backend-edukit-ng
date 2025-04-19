@@ -4,7 +4,7 @@ import Otp from "../../models/Otp.js";
 import { sendMail } from "../../utils/Email.js";
 import { sanitizeUser } from "../../utils/SanitizeUser.js";
 import { generateToken } from "../../utils/GenerateToken.js";
-import RegisterSchema from "../../Validation/User/registerValidatior.js";
+import RegisterSchema from "../../Validation/User/registerValidator.js";
 import User from "../../models/User.model.js";
 import mongoose from "mongoose";
 import expressAsyncHandler from "express-async-handler";
@@ -14,7 +14,8 @@ export const registerUser = expressAsyncHandler(async (req, res, next) => {
   session.startTransaction();
   try {
     const user = await RegisterSchema.validateAsync(req.body);
-    const { email, password, name, role } = user;
+    const { name, username, email, password, role, phoneNumber, address } =
+      user;
 
     const existingUser = await User.findOne({ email });
     if (existingUser) {
@@ -28,10 +29,14 @@ export const registerUser = expressAsyncHandler(async (req, res, next) => {
 
     const newUser = new User({
       name,
+      username,
       email,
       role,
       password: hashedPassword,
+      phoneNumber,
+      address,
     });
+
     const savedUser = await newUser.save();
     const otp = generateOtp();
     const hashedOtp = await bcrypt.hash(otp, 10);
@@ -40,6 +45,7 @@ export const registerUser = expressAsyncHandler(async (req, res, next) => {
       otp: hashedOtp,
       expiresAt: Date.now() + parseInt(process.env.OTP_EXPIRATION_TIME),
     });
+
     await newOtp.save();
 
     // send otp to email
@@ -48,8 +54,10 @@ export const registerUser = expressAsyncHandler(async (req, res, next) => {
       "OTP Verification Code",
       `Your OTP is: <b>${otp}</b>`
     );
+
     const secureInfo = sanitizeUser(savedUser);
-    const token = generateToken(secureInfo);
+    const token = generateToken(savedUser._id);
+    console.log(token);
     const cookieExpirationDays = parseInt(process.env.COOKIE_EXPIRATION_DAYS);
     if (isNaN(cookieExpirationDays)) {
       throw new Error("COOKIE_EXPIRATION_DAYS must be a valid number.");

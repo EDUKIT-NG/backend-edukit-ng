@@ -10,14 +10,15 @@ import { getAllUsers, getASingleUser } from "../controllers/User/getUser.js";
 import { deleteUser } from "../controllers/User/deleteUser.js";
 import { createProfileSchool } from "../controllers/User/SchoolProfile.js";
 import createStudentProfile from "../controllers/User/studentProfile.js";
+import { verifyToken } from "../middleware/VerifyToken.js";
 
 const router = Router();
 
 router.post("/register", registerUser);
 router.post("/login", loginUser);
-router.post("/verify/:id", verifyOtp);
-router.post("/resend-otp/:id", resendOtp);
-router.post("/reset-password/:id", resetPassword);
+router.post("/verify", verifyToken, verifyOtp);
+router.post("/resend-otp", verifyToken, resendOtp);
+router.post("/reset-password", verifyToken, resetPassword);
 router.get("/", getAllUsers);
 router.get("/:id", getASingleUser);
 

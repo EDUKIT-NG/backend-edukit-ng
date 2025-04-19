@@ -7,10 +7,15 @@ import User from "../../models/User.model.js";
 import expressAsyncHandler from "express-async-handler";
 
 const resendOtp = expressAsyncHandler(async (req, res) => {
+  console.log("start 1");
   const session = await mongoose.startSession();
   session.startTransaction();
   try {
-    const { id } = req.params;
+    console.log("start");
+
+    console.log(req.user);
+
+    const id = req.user._id;
     const user = await User.findById(id);
     if (!user) {
       session.abortTransaction();
@@ -29,7 +34,7 @@ const resendOtp = expressAsyncHandler(async (req, res) => {
       otp: hashedOtp,
       expiresAt: Date.now() + parseInt(process.env.OTP_EXPIRATION_TIME),
     });
-    newOtp.save();
+    await newOtp.save();
 
     await sendMail(
       user.email,

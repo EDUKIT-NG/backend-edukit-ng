@@ -1,8 +1,18 @@
-import Logger from "../utils/Logger.js";
+// import Logger from "../utils/Logger.js";
 
-const logger = Logger.getLogger("ResponseHandler");
+// const logger = Logger.getLogger("ResponseHandler");
 
-export const responseHandler = (res, { success = true, message, data = null, error = null, status = 200, pagination = null }) => {
+export const responseHandler = (
+  res,
+  {
+    success = true,
+    message,
+    data = null,
+    error = null,
+    status = 200,
+    pagination = null,
+  }
+) => {
   // Automatically log errors if they exist
   if (!success && error) {
     logger.error(`Error: ${message} | Details: ${error}`);
@@ -22,7 +32,9 @@ export const responseHandler = (res, { success = true, message, data = null, err
 export const errorHandler = (err, req, res, next) => {
   // Prevent undefined req
   const requestUrl = req?.originalUrl || "Unknown Route";
-  logger.error(`Unhandled Error at ${req.originalUrl}: ${err.message}\n${err.stack}`);
+  logger.error(
+    `Unhandled Error at ${req.originalUrl}: ${err.message}\n${err.stack}`
+  );
 
   return responseHandler(res, {
     success: false,

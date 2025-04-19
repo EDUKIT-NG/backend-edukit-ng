@@ -4,11 +4,11 @@ import cors from "cors";
 import session from "express-session";
 import cookieParser from "cookie-parser";
 import dotenv from "dotenv";
-import Logger from "./utils/Logger.js";
-import httpLogger from "./middleware/httpLogger.js";
-import studentRouter from "./routes/Student.js";
-import sponsorRouter from "./routes/Sponsor.js";
-import { verifyToken } from "./middleware/VerifyToken.js";
+// import Logger from "./utils/Logger.js";
+// import httpLogger from "./middleware/httpLogger.js";
+// import studentRouter from "./routes/Student.js";
+// import sponsorRouter from "./routes/Sponsor.js";
+
 import { authorizeRoles } from "./middleware/AuthorizeRole.js";
 import { errorHandler } from "./middleware/ResponseHandler.js";
 import morgan from "morgan";
@@ -23,33 +23,38 @@ const app = express();
 const port = process.env.PORT;
 const db = process.env.MONGO_URI;
 
-const morganFormat = ':method :url :status:'
-const logger = Logger.createLogger("Main");
+const morganFormat = ":method :url :status:";
+// const logger = Logger.createLogger("Main");
 
 // connect to database
 mongoose
   .connect(db, {})
   .then(() => {
-    logger.info("Connected to database.");
+    // logger.info("Connected to database.");
+    console.log("Connected to database.");
   })
   .catch((error) => {
-    logger.error(`Error connecting to database: ${error.message}`);
+    // logger.error(`Error connecting to database: ${error.message}`);
+    console.log(`Error connecting to database: ${error.message}`);
   });
 
 // middleware
 app.use(express.json());
 app.use(cookieParser());
-app.use(httpLogger);
-app.use(morgan(morganFormat, {
-  stream: {
-    write: (message) => {
-      const logObject = {
-        method: message.split(" ")[0],
-      };
-      logger.info(JSON.stringify(logObject))
-    }
-  }
-}));
+// app.use(httpLogger);
+app.use(
+  morgan(morganFormat, {
+    stream: {
+      write: (message) => {
+        const logObject = {
+          method: message.split(" ")[0],
+        };
+        // logger.info(JSON.stringify(logObject));
+        console.log(JSON.stringify(logObject));
+      },
+    },
+  })
+);
 
 app.use(
   session({
@@ -57,7 +62,7 @@ app.use(
     resave: false,
     saveUninitialized: true,
     cookie: {
-      maxAge: 60 * 60 * 1000,
+      maxAge: 60 * 60 * 1000 * 24,
     },
   })
 );
@@ -67,7 +72,8 @@ app.use((req, res, next) => {
   if (req.session.cookie.expires < Date.now()) {
     req.session.destroy((err) => {
       if (err) {
-        logger.error(`Error destroying session: ${err.message}`);
+        // logger.error(`Error destroying session: ${err.message}`);
+        console.log(`Error destroying session: ${err.message}`);
       } else {
         res.clearCookie("session");
         res.redirect("/login");
@@ -78,21 +84,6 @@ app.use((req, res, next) => {
   }
 });
 
-// Public routes (excluded from authentication)
-const publicPaths = ["/login", "/register", "/forgot-password"];
-
-// Apply authentication middleware globally, but exclude public routes
-app.use((req, res, next) => {
-  // Check if the request path ends with a public path
-  const isPublicRoute = publicPaths.some((route) => req.path.endsWith(route));
-
-  if (isPublicRoute) {
-    return next(); // Skip authentication for public routes
-  }
-  verifyToken(req, res, next);
-});
-
-// Apply RBAC globally after authentication
 app.use((req, res, next) => {
   if (req.user) {
     // Apply different roles for different base routes
@@ -127,5 +118,6 @@ app.get("/", (req, res) => {
 
 app.use(errorHandling);
 app.listen(port, () => {
-  logger.info(`Server is running on port ${port}`);
+  // logger.info(`Server is running on port ${port}`);
+  `Server is running on port ${port}`;
 });

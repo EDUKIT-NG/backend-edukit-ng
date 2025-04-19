@@ -9,10 +9,10 @@ export const verifyOtp = expressAsyncHandler(async (req, res) => {
   const session = await mongoose.startSession();
   session.startTransaction();
   try {
-    const { id } = req.params;
+    const id = req.user._id;
     const { otp } = req.body;
 
-    const user = await User.findById(id);
+    const user = await User.findById({ _id: id });
 
     if (!user) {
       session.abortTransaction();
@@ -51,6 +51,7 @@ export const verifyOtp = expressAsyncHandler(async (req, res) => {
       { isVerified: true },
       { new: true }
     );
+
     await Otp.findByIdAndDelete(isOtpExisting._id);
     await sendMail(
       user.email,
@@ -58,7 +59,7 @@ export const verifyOtp = expressAsyncHandler(async (req, res) => {
       `Your account has been created successfully</b>`
     );
     await session.commitTransaction();
-
+    verifiedUser.save();
     return res.status(200).json({
       message: "Email verified:",
     });
